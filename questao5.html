@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Questão 5</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script> 
+        function reverse(){ 
+            var str = document.getElementById("txtStr").value;
+            var invertida = str.split("").reverse().join("");
+            document.write(invertida);
+        } 
+    </script> 
+</head> 
+<body> 
+    <div>05) Desenvolva uma página HTML capaz de inverter uma string de um dado campo de entrada, a partir do click de um botão.</div>
+    String<input type="text" id="txtStr"> 
+    <input type="button" value="Exibir" onclick="reverse()"> 
+    </body> 
+</html> 

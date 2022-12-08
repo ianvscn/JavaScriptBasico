@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+    <script>
+    function media(){
+        var lista = document.getElementById("txtNum").value;
+        lista = lista.split(",", lista.length);
+        document.writeln("Valores: ["+lista+"]");
+        var soma = 0;
+        var media = 0;
+        var percentualN = 0;
+        var percentualP = 0;
+        var neg = 0;
+        var pos = 0;
+        for (var i = 0; i<lista.length; i++){
+            soma += parseInt(lista[i]);
+            var num = Math.sign(parseInt(lista[i]));
+            if (num<=0){
+                neg += 1;
+            }else{
+                pos += 1;
+            }
+        }
+        var media = soma/lista.length;
+        percentualN = neg/lista.length * 100;
+        percentualP = pos/lista.length *100;
+        document.writeln("Média Aritmética: "+media);
+        document.writeln("Quantidade de positivos: "+pos);
+        document.writeln("Quantidade de negativos: "+neg);
+        document.writeln("Percentual de positivos: "+percentualP+"%");
+        document.writeln("Percentual de negativos: "+percentualN+"%");
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <p>09) Desenvolva uma página HTML capaz de escrever a média aritmética dos valores lidos, 
+            a quantidade de valores positivos, a quantidade de valores negativos e o percentual 
+            de valores negativos e positivos na lista de inteiros (separados por vírgula) 
+            de um dado campo de entrada, a partir do click de um botão.
+        </p>
+    </div>
+    <div>
+        Números
+        <input type="text" id="txtNum"> 
+        <input type="button" value="Media" onclick="media()">
+    </div>
+</body>
+</html>

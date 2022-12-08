@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <script>
+        function verificarData(){ 
+        var data = document.getElementById("txtData").value; 
+        data = data.split("/"); 
+        document.write("Dia: "+data[0]+"<br>"); 
+        document.write("Mês: "+data[1]+"<br>"); 
+        document.write("Ano: "+data[2]+"<br>"); 
+        } 
+    </script>
+</head>
+<body>
+    <div>04) Desenvolva uma página HTML capaz de quebrar um data de um dado campo de entrada em dia, mês e ano, a partir do click de um botão. </div>
+    Data<input type="text" id="txtData"> 
+    <input type="button" value="Exibir" onclick="verificarData()"> </body> 
+</body>
+</html>

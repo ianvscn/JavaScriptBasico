@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+    <script>
+    function somar(){
+        var lista = document.getElementById("txtNum").value;
+        lista = lista.split(",");
+        document.writeln("Lista inicial: "+lista);
+        var soma = 0;
+        for(var i = 0; i < lista.length; i++){
+            if (parseInt(lista[i])%3==0 && lista[i]%2!=0){
+                var num = parseInt(lista[i]);
+                soma += num;
+            }
+        }
+        document.write("Soma: "+soma);
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <p>7. Desenvolva uma página HTML capaz de efetuar a soma
+            de todos os números ímpares que são múltiplos de três
+            e que se encontram dentro dos números inteiros
+            (separados por vírgula) de um dado campo de entrada,
+            a partir do click de um botão.
+        </p>
+    </div>
+    <div>
+        Números
+        <input type="text" id="txtNum"> 
+        <input type="button" value="Somar" onclick="somar()">
+    </div>
+</body>
+</html>

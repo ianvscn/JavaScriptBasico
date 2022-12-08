@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <script>
+        function calcularQuadrado(){ 
+            var numeros = document.getElementById("txtNumeros").value; 
+            numeros = numeros.split(","); 
+            for(i=0;i<numeros.length;i++){ 
+                quadrado = parseInt(numeros[i])*parseInt(numeros[i]); 
+                document.write("O quadrado de "+numeros[i]+ " é "+quadrado+"<br>"); 
+            } 
+        } 
+    </script>
+</head>
+<body>
+    <div>01) Desenvolva uma página HTML capaz de calcular o quadrado de todos 
+        os números (separados por vírgula) de um dado campo de entrada, 
+        a partir do click de um botão. 
+    </div>
+    Números<input type="text" id="txtNumeros"> 
+    <input type="button" value="Calcular Quadrado" onclick="calcularQuadrado()"> 
+</body>
+</html>

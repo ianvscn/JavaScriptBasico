@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+    <script>
+        function ordenar(){
+            var lista = document.getElementById("txtNum").value;
+            lista = lista.split(",");
+            lista.sort();
+            for (i=0; i<lista.length; i++){
+                if (i!=lista.length -1){
+                    document.write(lista[i]+",");
+                } else{
+                    document.write(lista[i]);
+                }
+            }   
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>6. Desenvolva uma página HTML capaz de ordenar uma lista de inteiros
+        (separados por vírgula) de um dado campo de entrada,
+        a partir do click de um botão. </p>
+    </div>
+    <div>
+        Números
+        <input type="text" id="txtNum"> 
+        <input type="button" value="Ordenar" onclick="ordenar()">
+    </div>
+</body>
+</html>

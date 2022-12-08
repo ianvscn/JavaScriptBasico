@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+    <script>
+    function inverter(){
+        var lista = document.getElementById("txtNum").value;
+        lista = lista.split(",", lista.length);
+        document.writeln("Lista inicial: ["+lista+"]");
+        lista.reverse();
+        document.write("Lista invertida: ["+lista+"]");
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <p>10) Desenvolva uma página HTML capaz de inverter os valores 
+            (ex:[1, 5, 7, 2] fica [2, 7, 5, 1]) na lista de inteiros 
+            (separados por vírgula) de um dado campo de entrada, 
+            a partir do click de um botão.
+        </p>
+    </div>
+    <div>
+        Números
+        <input type="text" id="txtNum"> 
+        <input type="button" value="Inverter" onclick="inverter()">
+    </div>
+</body>
+</html>
